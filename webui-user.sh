@@ -2,6 +2,8 @@
 #########################################################
 # Uncomment and change the variables below to your need:#
 #########################################################
+# 添加此行，使用中国镜像站下载模型
+export HF_ENDPOINT="https://hf-mirror.com"
 
 # Install directory without trailing slash
 #install_dir="/home/$(whoami)"
@@ -11,6 +13,7 @@
 
 # Commandline arguments for webui.py, for example: export COMMANDLINE_ARGS="--medvram --opt-split-attention"
 #export COMMANDLINE_ARGS=""
+export COMMANDLINE_ARGS="--listen --port 7860 --enable-insecure-extension-access --xformers"
 
 # python3 executable
 #python_cmd="python3"
@@ -20,6 +23,7 @@
 
 # python3 venv without trailing slash (defaults to ${install_dir}/${clone_dir}/venv)
 #venv_dir="venv"
+venv_dir="-"
 
 # script to launch to start the app
 #export LAUNCH_SCRIPT="launch.py"
