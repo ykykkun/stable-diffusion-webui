@@ -103,7 +103,7 @@ var contextMenuInit = function () {
             }
             if (
                 window.flutter_inappwebview != null &&
-                e.srcElement.classList.includes("tools_app_generate_btn")
+                e.srcElement.className.includes("tools_app_generate_btn")
             ) {
                 window.flutter_inappwebview?.callHandler("onGenerateClick");
             }
